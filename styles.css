@@ -281,6 +281,126 @@ body {
     margin-right: auto;
 }
 
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.about-name {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.about-name-origin {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--border-light);
+}
+
+.about-name-origin h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.about-name-origin p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.about-journey {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.about-journey h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.timeline {
+    position: relative;
+    padding-left: var(--spacing-lg);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--spacing-xl);
+    padding-left: var(--spacing-xl);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 2px solid var(--background);
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.timeline-period {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--primary-color);
+    background: var(--surface);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    display: inline-block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.timeline-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.about-passion {
+    text-align: center;
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: var(--spacing-xl);
+    border: 1px solid var(--border-light);
+}
+
+.about-passion h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.about-passion p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: var(--font-size-lg);
+}
+
 .achievements-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -501,6 +621,22 @@ body {
     
     .container {
         padding: 0 var(--spacing-md);
+    }
+    
+    .about-content {
+        margin: 0 var(--spacing-md);
+    }
+    
+    .about-name {
+        font-size: var(--font-size-xl);
+    }
+    
+    .timeline {
+        padding-left: var(--spacing-md);
+    }
+    
+    .timeline-item {
+        padding-left: var(--spacing-lg);
     }
     
     .section {
