@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">Portfolio</div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#achievements" class="nav-link">実績</a>
+                <a href="#works" class="nav-link">作品</a>
+                <a href="#skills" class="nav-link">スキル</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-greeting">こんにちは、</span>
+                    <span class="hero-name">原田太郎です</span>
+                </h1>
+                <p class="hero-subtitle">フルスタックデベロッパー & UIデザイナー</p>
+                <div class="hero-cta">
+                    <a href="#works" class="cta-button">作品を見る</a>
+                    <a href="#contact" class="cta-button-outline">お問い合わせ</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-content">
+                        <div class="code-snippet">
+                            <div class="code-line">
+                                <span class="code-keyword">const</span> 
+                                <span class="code-variable">developer</span> = {
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-property">passion</span>: 
+                                <span class="code-string">'創造'</span>,
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-property">focus</span>: 
+                                <span class="code-string">'ユーザー体験'</span>
+                            </div>
+                            <div class="code-line">};</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <p class="section-subtitle">ユーザー中心のデザインと最新技術で、価値あるプロダクトを創造します。</p>
+            </div>
+        </section>
+
+        <section id="achievements" class="section">
+            <div class="container">
+                <h2 class="section-title">実績</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-number">50+</div>
+                        <div class="achievement-label">プロジェクト完了</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-number">3年</div>
+                        <div class="achievement-label">開発経験</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-number">10+</div>
+                        <div class="achievement-label">満足したクライアント</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-number">99%</div>
+                        <div class="achievement-label">プロジェクト成功率</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="section">
+            <div class="container">
+                <h2 class="section-title">作品</h2>
+                <div class="works-grid">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <div class="work-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="4" width="18" height="12" rx="1" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M8 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">Eコマースプラットフォーム</h3>
+                            <p class="work-description">React/Next.js で構築した高速なオンラインストア</p>
+                            <div class="work-tags">
+                                <span class="work-tag">React</span>
+                                <span class="work-tag">Next.js</span>
+                                <span class="work-tag">TypeScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="work-card">
+                        <div class="work-image">
+                            <div class="work-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">AI チャットボット</h3>
+                            <p class="work-description">自然言語処理を活用したカスタマーサポートシステム</p>
+                            <div class="work-tags">
+                                <span class="work-tag">Python</span>
+                                <span class="work-tag">FastAPI</span>
+                                <span class="work-tag">OpenAI</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="work-card">
+                        <div class="work-image">
+                            <div class="work-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="currentColor" stroke-width="2"/>
+                                    <polyline points="3.27,6.96 12,12.01 20.73,6.96" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <line x1="12" y1="22.08" x2="12" y2="12" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">タスク管理アプリ</h3>
+                            <p class="work-description">チーム向けプロジェクト管理ツール</p>
+                            <div class="work-tags">
+                                <span class="work-tag">Vue.js</span>
+                                <span class="work-tag">Node.js</span>
+                                <span class="work-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">スキル</h2>
+                <div class="skills-categories">
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">フロントエンド</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">⚛️</div>
+                                <span>React</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">🚀</div>
+                                <span>Next.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">💚</div>
+                                <span>Vue.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">📘</div>
+                                <span>TypeScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">バックエンド</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">🟢</div>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">🐍</div>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">🗄️</div>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">🍃</div>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">ツール・その他</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">🐳</div>
+                                <span>Docker</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">☁️</div>
+                                <span>AWS</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">🎨</div>
+                                <span>Figma</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">📱</div>
+                                <span>UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">お問い合わせ</h2>
+                <p class="section-subtitle">新しいプロジェクトについて話し合いませんか？</p>
+                <div class="contact-cta">
+                    <a href="mailto:hello@example.com" class="cta-button">メールを送る</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 原田太郎. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
