@@ -5,14 +5,33 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let lastScrollY = window.scrollY;
     
-    function handleScroll() {
+    function updateScrollBackground() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
         const currentScrollY = window.scrollY;
         
         if (currentScrollY > 100) {
-            nav.style.background = 'rgba(255, 255, 255, 0.98)';
+            if (currentTheme === 'dark') {
+                nav.style.background = 'rgba(17, 24, 39, 0.98)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+            }
+        } else {
+            if (currentTheme === 'dark') {
+                nav.style.background = 'rgba(17, 24, 39, 0.95)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        }
+    }
+
+    function handleScroll() {
+        const currentScrollY = window.scrollY;
+        
+        updateScrollBackground();
+        
+        if (currentScrollY > 100) {
             nav.style.boxShadow = '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)';
         } else {
-            nav.style.background = 'rgba(255, 255, 255, 0.95)';
             nav.style.boxShadow = 'none';
         }
         
@@ -193,4 +212,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     updateActiveNavLink();
+    
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    if (!themeToggle) {
+        console.error('Theme toggle button not found');
+        return;
+    }
+    
+    const themeIcon = themeToggle.querySelector('.theme-toggle-icon');
+    
+    if (!themeIcon) {
+        console.error('Theme icon not found');
+        return;
+    }
+    
+    let savedTheme = 'light';
+    try {
+        savedTheme = localStorage.getItem('theme') || 'light';
+    } catch (e) {
+        console.warn('localStorage access denied:', e);
+    }
+    
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+    
+    function updateThemeIcon(theme) {
+        themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+    
+    function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        
+        try {
+            localStorage.setItem('theme', newTheme);
+        } catch (e) {
+            console.warn('localStorage write denied:', e);
+        }
+        
+        updateThemeIcon(newTheme);
+        
+        updateScrollBackground();
+    }
+    
+    themeToggle.addEventListener('click', toggleTheme);
 });
