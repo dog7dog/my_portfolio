@@ -511,6 +511,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 130% center;
 }
 
 .work-placeholder {
@@ -603,6 +604,17 @@ body {
 .skill-icon {
     font-size: var(--font-size-2xl);
     margin-bottom: var(--spacing-sm);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .contact-cta {
@@ -737,6 +749,8 @@ body {
     
     .skill-icon {
         font-size: var(--font-size-lg);
+        width: 40px;
+        height: 40px;
     }
 }
 
